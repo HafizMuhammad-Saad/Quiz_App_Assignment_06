@@ -1,0 +1,201 @@
+:root {
+    /* --bg-color: #F8F9FA;
+    --primary-color: #3498DB;
+    --accent-color: #E74C3C;
+    --text-color: #2C3E50;
+    --answer-color: #27AE60;
+    --hover-color: #2980B9; */
+
+    --bg-color: #F0F4F8;
+    --primary-color: #3498DB;
+    --accent-color: #E74C3C;
+    --text-color: #2C3E50;
+    --answer-color: #27AE60;
+    --hover-color: #2980B9;
+    --incorrect-color: #E74C3C;
+    --correct-color: #2ECC71;
+    --button-color: #3498db;
+    --button-hover-color: #2980B9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    /* width: 100%;
+    /* max-width: 700px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;  */
+
+    width: 100%;
+    max-width: 700px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+h1 {
+    /* font-family: cursive;
+    color: var(--primary-color); */
+
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+
+}
+
+#quizForm {
+        width: 100%;
+}
+div {
+    /* border: 1px solid ;
+    border-radius: 10px;
+    margin-block-end: 10px;
+    padding: 10px; */
+
+    /* border: 2px solid #ccc; */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+input {
+    margin-top: 10px;
+    margin-right: 10px;
+
+    
+}
+
+label {
+    /* cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+label:hover {
+    color: var(--primary-color);
+}
+
+h3 {
+    /* font-family: cursive;
+    margin-bottom: 10px; */
+
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+button {
+    /* background-color: var(--primary-color); 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; */
+
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    /* background-color: var(--hover-color); */
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px); 
+}
+
+#result {
+    /* font-size: 18px;
+    margin-top: 20px; */
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+input[type="radio"]:checked + label {
+    font-weight: bold;
+    color: var(--answer-color);
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+.correct {
+    color: #27AE60; 
+}
+.incorrect {
+    color: #E74C3C; 
+}
+
+#resultScore {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+#resultScore.animate {
+    transform: scale(1.2);
+}
+
+div:hover {
+    background-color: #f0f8ff;
+}
+
+/* Adding subtle animations */
+.container, h1, div, button {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
